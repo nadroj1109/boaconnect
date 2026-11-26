@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    font-family:
+        "Public Sans",
+        ui-sans-serif,
+        system-ui,
+        sans-serif;
+}
+
+.bg-forest-green {
+    background-color: #2E6F40;
+}
+
+
+.document-template-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: #ffffff;
+}
+
+.document-editor {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-top: 0;
+    overflow: hidden;
+}
+
+.document-editor-header {
+    padding: 20px 40px 12px;
+    border-bottom: 1px solid #e5e7eb;
+    background: #ffffff;
+}
+
+.document-header-content {
+    min-height: 120px;
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    color: #111827;
+}
+
+.document-editor-body {
+    padding: 20px 40px;
+    background: #ffffff;
+}
+
+.document-editor-body .ql-container {
+    border: 0;
+}
+
+.document-editor-body .ql-editor {
+    min-height: 500px;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #111827;
+}
+
+.document-editor-footer {
+    min-height: 140px;
+    padding: 12px 40px 30px;
+    border-top: 1px solid #e5e7eb;
+    background: #ffffff;
+}
+
+.document-footer-content {
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    color: #111827;
+}
+
+.document-editor-header p,
+.document-editor-footer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+
+    .document-editor-header,
+    .document-editor-body,
+    .document-editor-footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}

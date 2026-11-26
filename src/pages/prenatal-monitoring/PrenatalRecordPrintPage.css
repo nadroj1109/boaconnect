@@ -1,0 +1,326 @@
+@page {
+    size: 13in 11in;
+    margin: 7mm;
+}
+
+.prenatal-print-sheet {
+    width: 100%;
+    overflow-x: auto;
+    background: white;
+    color: #111;
+}
+
+.prenatal-print-table {
+    width: 100%;
+    min-width: 1100px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+
+.prenatal-print-table .resident-column {
+    width: 17%;
+}
+
+.prenatal-print-table .visit-column {
+    width: 8.25%;
+}
+
+.prenatal-print-table .remarks-column {
+    width: 17%;
+}
+
+.prenatal-print-table th,
+.prenatal-print-table td {
+    border: 1px solid #333;
+    padding: 4px;
+    vertical-align: top;
+    overflow-wrap: anywhere;
+}
+
+.prenatal-print-table th {
+    text-align: center;
+    font-weight: 700;
+}
+
+.prenatal-print-table .document-title {
+    padding: 8px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    background: #f1f1f1;
+}
+
+.registration-heading th {
+    text-align: left;
+    font-size: 11px;
+    padding: 7px 5px;
+}
+
+.registration-heading span {
+    display: inline-block;
+    margin-left: 4px;
+    font-weight: 400;
+}
+
+.visit-heading th {
+    height: 48px;
+    background: #eaeaea;
+    vertical-align: middle;
+}
+
+.visit-heading strong,
+.visit-heading small {
+    display: block;
+}
+
+.visit-heading strong {
+    font-size: 10px;
+}
+
+.visit-heading small {
+    margin-top: 3px;
+    font-size: 9px;
+    font-weight: 400;
+}
+
+.print-cell-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-height: 24px;
+}
+
+.print-cell-content strong {
+    font-size: 9px;
+    line-height: 1.2;
+}
+
+.print-cell-content span {
+    min-height: 10px;
+    font-size: 11px;
+    line-height: 1.2;
+}
+
+.resident-details-cell {
+    padding: 0 !important;
+}
+
+.resident-detail-row {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-height: 25px;
+    padding: 4px;
+    border-bottom: 1px solid #ddd;
+}
+
+.resident-detail-row:last-child {
+    border-bottom: 0;
+}
+
+.resident-detail-row strong {
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.resident-detail-row span {
+    min-height: 9px;
+    font-size: 11px;
+    overflow-wrap: anywhere;
+}
+
+.remarks-cell {
+    white-space: pre-wrap;
+    font-size: 11px;
+}
+
+.unscheduled-visits {
+    margin-top: 14px;
+}
+
+.unscheduled-visits h3 {
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.unscheduled-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: 10px;
+}
+
+.unscheduled-table th,
+.unscheduled-table td {
+    border: 1px solid #333;
+    padding: 5px;
+    text-align: left;
+    vertical-align: top;
+    overflow-wrap: anywhere;
+}
+
+.unscheduled-table th {
+    background: #eaeaea;
+}
+
+.print-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 9px;
+    color: #555;
+}
+
+@media screen {
+    .prenatal-print-sheet {
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        box-shadow: 0 1px 3px rgb(0 0 0 / 8%);
+    }
+}
+
+@media print {
+    html,
+    body {
+        background: white !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* Hide application interface */
+    .print-toolbar,
+    header,
+    nav,
+    aside,
+    .sidebar,
+    .app-sidebar,
+    .main-sidebar,
+    .app-header,
+    .main-header,
+    .navbar,
+    .topbar,
+    .header,
+    .page-header,
+    .app-layout-header,
+    .app-layout-sidebar,
+    .admin-sidebar,
+    .admin-header,
+    .main-nav,
+    .breadcrumb,
+    .no-print {
+        display: none !important;
+    }
+
+    /* Remove application layout spacing */
+    #root,
+    #app,
+    .app,
+    .app-layout,
+    .main-content,
+    .content-wrapper,
+    .page-content,
+    .page-container {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        transform: none !important;
+    }
+
+    .prenatal-print-sheet {
+        display: block !important;
+        width: 100%;
+        min-width: 0;
+        overflow: visible;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .prenatal-print-table {
+        width: 100%;
+        min-width: 0;
+        font-size: 11px;
+    }
+
+    .prenatal-print-table th,
+    .prenatal-print-table td {
+        padding: 4px;
+    }
+
+    .prenatal-print-table .document-title {
+        font-size: 16px;
+    }
+
+    .registration-heading th {
+        font-size: 11px;
+    }
+
+    .visit-heading th {
+        height: auto;
+    }
+
+    .visit-heading strong {
+        font-size: 10px;
+    }
+
+    .visit-heading small {
+        font-size: 9px;
+    }
+
+    .print-cell-content {
+        min-height: 20px;
+        gap: 3px;
+    }
+
+    .print-cell-content strong {
+        font-size: 9px;
+    }
+
+    .print-cell-content span {
+        font-size: 11px;
+    }
+
+    .resident-detail-row {
+        min-height: 22px;
+        padding: 3px;
+    }
+
+    .resident-detail-row strong {
+        font-size: 10px;
+    }
+
+    .resident-detail-row span {
+        font-size: 11px;
+    }
+
+    .remarks-cell {
+        font-size: 11px;
+    }
+
+    .unscheduled-visits {
+        break-inside: avoid;
+    }
+
+    .unscheduled-visits h3 {
+        font-size: 13px;
+    }
+
+    .unscheduled-table {
+        font-size: 10px;
+    }
+
+    .print-footer {
+        font-size: 9px;
+    }
+}
